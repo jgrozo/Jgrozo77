@@ -1,0 +1,49 @@
+class Biblioteca{
+    String nombre;
+    String codigo;
+    int cantidad;
+    boolean disponible;
+    Libros[] baselibros;
+
+    Biblioteca (){
+    }
+
+    Biblioteca( String _nombre,
+                String _codigo,int _cantidad,
+                boolean _disponible,
+                Libros[] _baselibros){
+        nombre = _nombre;
+        codigo = _codigo;
+        cant = _cantidad;
+		disponible = _disponible;
+        baselibros = _baselibros;
+    }
+
+    void imprimirHistoria(){
+        System.out.println("Base datos libros");
+        
+        for(int i=0; i<baselibros.length; i++){
+            Libros temporal = baselibros[i];
+            System.out.println(temporal.nombre + temporal.codigo + temporal.cant + temporal.disponible);
+        }
+    }
+
+    public static void main(String[] args){
+        Libros[] temas = new Libros[5];
+        temas[0] = new Libros("Calculo diferencial ", " 111  ", 2 , true);
+        temas[1] = new Libros("Programacion de computadores  ", " 222 ", 2 , true);
+        temas[2] = new Libros("Matematicas Discretas  ", " 333 ", 2 , true);
+        temas[3] = new Libros("Preseminario  ", " 444 ", 2 , true);
+        temas[4] = new Libros("Introduccion a al ingenieria  ", " 555 ", 2  , true );
+
+	temas[0].setNombre("Programacion orientada a objetos");
+temas[1].prestar(false);
+	temas[0].prestar(false);
+        Biblioteca ejemplar = new Biblioteca("Guillermo", "555",6, true, temas);
+temas[0].devolver(true);//
+
+        ejemplar.imprimirHistoria();
+      
+    }
+}
+  

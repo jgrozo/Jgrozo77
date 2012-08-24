@@ -1,0 +1,22 @@
+class FooCorporation                                        {
+public static void pay(double sueldo, int horas) {
+if (sueldo < 8.00) 
+} else if (horas > 60) {
+} else {
+double extras = 0;
+if (horas > 40) {
+extras = horas-40*sueldo;
+horas = 40;
+ }
+ double pay = sueldo * horas;
+ pay = extras * sueldo * 1.5;
+ System.out.println("tu pago es" + pay);
+}
+}
+public static void main(String[] arguments) {
+
+ pay(7.50, 35);
+ pay(8.20, 47);
+ pay(10.00, 73);
+}
+}

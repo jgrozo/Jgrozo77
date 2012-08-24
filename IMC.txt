@@ -1,0 +1,14 @@
+
+public class imc {
+
+ public static void main(String [] args) {
+		double estatura = 1.75;
+		int peso = 65;
+		double imc = peso/(estatura*estatura);
+		if (imc>18.5){
+		System.out.println(" Tu IMC es Normal" );
+		}
+		else if (imc<18.5) {
+		System.out.println ("Infrapeso");}
+ }
+}

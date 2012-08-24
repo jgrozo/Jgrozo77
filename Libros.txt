@@ -1,0 +1,29 @@
+class Libros{
+    String nombre;
+    String codigo;
+    int cantidad;
+    boolean disponible;
+    
+Libros(String nombre, String codigo, int cantidad, boolean disponible){
+        this.nombre = nombre;
+        this.codigo = codigo;
+        this.cantidad = cantidad;
+        this.disponible = disponible;
+      
+    }
+
+    void setNombre(String nombreNuevo){
+		this.nombre = nombreNuevo;
+	}
+	 void prestar(boolean disponibilidad){
+		this.disponible = false;
+		System.out.println("Libro en uso "+nombre);
+		
+	}
+	 void devolver(boolean disponibilidad){
+		this.disponible = true;
+		
+		System.out.println("Se acaba de devolver el libro   "+nombre);
+	}
+
+}
